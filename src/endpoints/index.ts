@@ -11,6 +11,7 @@ import Products from './Products'
 import Taxons from './Taxons'
 import Vendors from './Vendors'
 import Wishlists from './Wishlists'
+import Donations from './Donations'
 
 export {
   Account,
@@ -25,5 +26,6 @@ export {
   Products,
   Taxons,
   Vendors,
-  Wishlists
+  Wishlists,
+  Donations
 }
