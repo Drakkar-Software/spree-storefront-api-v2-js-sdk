@@ -11,7 +11,8 @@ import {
   Products,
   Taxons,
   Vendors,
-  Wishlists
+  Wishlists,
+  Donations
 } from './endpoints'
 import type { CreateFetcherConfig, Fetcher, IClientConfig } from './interfaces/ClientConfig'
 
@@ -29,6 +30,7 @@ class Client {
   public taxons: Taxons
   public vendors: Vendors
   public wishlists: Wishlists
+  public donations: Donations
 
   protected host: string
   protected fetcher: Fetcher
@@ -66,6 +68,7 @@ class Client {
     this.taxons = this.makeTaxons()
     this.vendors = this.makeVendors()
     this.wishlists = this.makeWishlists()
+    this.donations = this.makeDonations()
   }
 
   protected makeAccount(): Account {
@@ -118,6 +121,10 @@ class Client {
 
   protected makeWishlists(): Wishlists {
     return new Wishlists({ fetcher: this.fetcher })
+  }
+
+  protected makeDonations(): Donations {
+    return new Donations({ fetcher: this.fetcher })
   }
 }
 
