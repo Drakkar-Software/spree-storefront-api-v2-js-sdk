@@ -1,22 +1,26 @@
-import {JsonApiDocument, JsonApiListResponse, JsonApiSingleResponse} from './JsonApi'
+import { JsonApiDocument, JsonApiListResponse, JsonApiSingleResponse } from './JsonApi'
 import { ResultResponse } from './ResultResponse'
-import {WithCommonOptions} from "./WithCommonOptions";
-import {WishlistsCreate, WishlistsDefault, WishlistsList, WishlistsShow} from "./Wishlist";
+import { WithCommonOptions } from './WithCommonOptions'
 
-export interface DonationsAttr extends JsonApiDocument {
+export interface DonationAttr extends  JsonApiDocument {
   id: string
-  token: string
-  items: {
-    donation: Donation
-  }[]
+  attributes: {
+    created_at: number
+    amount: number
+    currency: string
+    blockchain: string
+    transaction_id: string
+    addressTo: string
+    approved: boolean
+  }
 }
 
 export interface Donations extends JsonApiListResponse {
-  data: DonationsAttr[]
+  data: DonationAttr[]
 }
 
 export interface Donation extends JsonApiSingleResponse {
-  data: DonationsAttr
+  data: DonationAttr
 }
 
 export interface DonationResult extends ResultResponse<Donation> {}
