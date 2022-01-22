@@ -10,6 +10,7 @@ export interface DonationAttr extends  JsonApiDocument {
     currency: string
     blockchain: string
     transaction_id: string
+    transaction_web_url: string
     addressTo: string
     approved: boolean
   }
