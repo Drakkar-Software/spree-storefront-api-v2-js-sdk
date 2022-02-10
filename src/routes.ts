@@ -75,6 +75,7 @@ const endpoints = {
   vendorsPath: (): string => `${storefrontPath}/vendors`,
   vendorPath: (id: string): string => `${storefrontPath}/vendors/${encodeURIComponent(id)}`,
   donationsPath: (): string => `${storefrontPath}/donations`,
+  deploymentsPath: (): string => `${storefrontPath}/deployments`,
   paymentAddressesSettingsPath: (): string => `${storefrontPath}/credit/settings/payment/addresses`,
 }
 
