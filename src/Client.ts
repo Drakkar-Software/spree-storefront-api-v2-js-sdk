@@ -13,6 +13,7 @@ import {
   Vendors,
   Wishlists,
   Donations,
+  Deployments,
   Settings
 } from './endpoints'
 import type { CreateFetcherConfig, Fetcher, IClientConfig } from './interfaces/ClientConfig'
@@ -32,6 +33,7 @@ class Client {
   public vendors: Vendors
   public wishlists: Wishlists
   public donations: Donations
+  public deployments: Deployments
   public settings: Settings
 
   protected host: string
@@ -71,6 +73,7 @@ class Client {
     this.vendors = this.makeVendors()
     this.wishlists = this.makeWishlists()
     this.donations = this.makeDonations()
+    this.deployments = this.makeDeployments()
     this.settings = this.makeSettings()
   }
 
@@ -128,6 +131,10 @@ class Client {
 
   protected makeDonations(): Donations {
     return new Donations({ fetcher: this.fetcher })
+  }
+
+  protected makeDeployments(): Deployments {
+    return new Deployments({ fetcher: this.fetcher })
   }
 
   protected makeSettings(): Settings {

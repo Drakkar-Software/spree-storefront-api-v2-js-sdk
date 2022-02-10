@@ -12,6 +12,7 @@ import Taxons from './Taxons'
 import Vendors from './Vendors'
 import Wishlists from './Wishlists'
 import Donations from './Donations'
+import Deployments from './Deployments'
 import Settings from './Settings'
 
 export {
@@ -29,5 +30,6 @@ export {
   Vendors,
   Wishlists,
   Donations,
+  Deployments,
   Settings
 }
