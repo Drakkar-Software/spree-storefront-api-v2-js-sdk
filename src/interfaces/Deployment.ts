@@ -31,3 +31,6 @@ export type CreateOptions = WithCommonOptions<{ suggestToken: true; suggestQuery
 export type UpdateOptions = WithCommonOptions<{ suggestToken: true; suggestQuery: true }>
 
 export type StopOptions = WithCommonOptions<{ suggestToken: true; suggestQuery: true }>
+
+export type ShowOptions = WithCommonOptions<{ suggestToken: true; suggestQuery: true }>
+

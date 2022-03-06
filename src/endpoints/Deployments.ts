@@ -9,6 +9,7 @@ import type {
     CreateOptions,
     UpdateOptions,
     StopOptions,
+    ShowOptions,
 } from '../interfaces/Deployment'
 import routes from '../routes'
 
@@ -43,5 +44,16 @@ export default class Deployments extends Http {
         const { token, params } = squashAndPreparePositionalArguments([tokenOrOptions, positionalParams], [])
 
         return await this.spreeResponse<DeploymentResponse>('delete', routes.deploymentsPath(), token, params)
+    }
+
+    public async show(deploymentId: string, options: ShowOptions): Promise<DeploymentResult>
+    public async show(...allArguments: any[]): Promise<DeploymentResult> {
+        const [tokenOrOptions, deploymentId, positionalParams = {}] = allArguments
+        const { deployment_id, token, params } = squashAndPreparePositionalArguments(
+            [{ deployment_id: deploymentId }, tokenOrOptions, positionalParams],
+            ['deployment_id']
+        )
+
+        return await this.spreeResponse<DeploymentResponse>('get', routes.deploymentShowPath(deployment_id), token, params)
     }
 }
