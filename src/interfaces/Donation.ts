@@ -13,6 +13,7 @@ export interface DonationAttr extends  JsonApiDocument {
     transaction_web_url: string
     addressTo: string
     approved: boolean
+    offered_credits: number
   }
 }
 
