@@ -14,6 +14,7 @@ import Wishlists from './Wishlists'
 import Donations from './Donations'
 import Deployments from './Deployments'
 import Settings from './Settings'
+import Credits from './Credits'
 
 export {
   Account,

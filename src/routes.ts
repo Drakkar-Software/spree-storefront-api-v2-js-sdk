@@ -1,4 +1,5 @@
 export const storefrontPath = `api/v2/storefront`
+export const platformPath = `api/v2/platform`
 
 const endpoints = {
   productsPath: (): string => `${storefrontPath}/products`,
@@ -78,6 +79,7 @@ const endpoints = {
   deploymentsPath: (): string => `${storefrontPath}/deployments`,
   deploymentShowPath: (deploymentId: string): string => `${storefrontPath}/deployments/${encodeURIComponent(deploymentId)}`,
   paymentAddressesSettingsPath: (): string => `${storefrontPath}/donations/addresses`,
+  creditsPath: (): string => `${platformPath}/store_credits`,
 }
 
 export default endpoints
