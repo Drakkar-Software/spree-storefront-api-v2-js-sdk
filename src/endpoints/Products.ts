@@ -5,6 +5,7 @@ import type {
   IProductResult,
   IProducts,
   IProductsResult,
+  CreateOptions,
   ListOptions,
   ShowOptions
 } from '../interfaces/Product'
@@ -38,5 +39,13 @@ export default class Products extends Http {
     )
 
     return await this.spreeResponse<IProduct>('get', routes.productPath(id), token, params)
+  }
+
+  public async create(options: CreateOptions): Promise<IProductResult>
+  public async create(...allArguments: any[]): Promise<IProductResult> {
+    const [tokenOrOptions, positionalParams] = allArguments
+    const { token, params } = squashAndPreparePositionalArguments([tokenOrOptions, positionalParams], [])
+
+    return await this.spreeResponse<IProduct>('post', routes.productsPath(), token, params)
   }
 }

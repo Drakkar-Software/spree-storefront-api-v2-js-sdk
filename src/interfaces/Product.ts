@@ -53,3 +53,5 @@ export type ShowOptions = WithCommonOptions<
   { suggestToken: true; suggestQuery: true; optionalToken: true },
   { id: string; image_transformation?: ImageTransformation }
 >
+
+export type CreateOptions = WithCommonOptions<{ suggestToken: true; suggestQuery: true }>
