@@ -13,6 +13,7 @@ export interface AccountAttr extends JsonApiDocument {
       email: string
       store_credits: number
       completed_orders: number
+      authored_products: number[]
     }
 
     relationships: IRelationships
