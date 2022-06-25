@@ -78,6 +78,7 @@ const endpoints = {
   deploymentsPath: (): string => `${storefrontPath}/deployments`,
   deploymentShowPath: (deploymentId: string): string => `${storefrontPath}/deployments/${encodeURIComponent(deploymentId)}`,
   paymentAddressesSettingsPath: (): string => `${storefrontPath}/donations/addresses`,
+  subscriptionsPath: (): string => `${storefrontPath}/subscriptions`,
 }
 
 export default endpoints

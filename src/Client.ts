@@ -14,6 +14,7 @@ import {
   Wishlists,
   Donations,
   Deployments,
+  Subscriptions,
   Settings
 } from './endpoints'
 import type { CreateFetcherConfig, Fetcher, IClientConfig } from './interfaces/ClientConfig'
@@ -34,6 +35,7 @@ class Client {
   public wishlists: Wishlists
   public donations: Donations
   public deployments: Deployments
+  public subscriptions: Subscriptions
   public settings: Settings
 
   protected host: string
@@ -74,6 +76,7 @@ class Client {
     this.wishlists = this.makeWishlists()
     this.donations = this.makeDonations()
     this.deployments = this.makeDeployments()
+    this.subscriptions = this.makeSubscriptions()
     this.settings = this.makeSettings()
   }
 
@@ -135,6 +138,10 @@ class Client {
 
   protected makeDeployments(): Deployments {
     return new Deployments({ fetcher: this.fetcher })
+  }
+
+  protected makeSubscriptions(): Subscriptions {
+    return new Subscriptions({ fetcher: this.fetcher })
   }
 
   protected makeSettings(): Settings {
