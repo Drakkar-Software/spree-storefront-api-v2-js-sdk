@@ -1,4 +1,4 @@
-export const storefrontPath = `api/v2/storefront`
+export const storefrontPath = `api`
 
 const endpoints = {
   productsPath: (): string => `${storefrontPath}/products`,
