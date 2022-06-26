@@ -25,7 +25,9 @@ export interface ProductAttr extends JsonApiDocument {
     display_price: string
     compare_at_price: string | null
     display_compare_at_price: string | null
-    deployment_count: number
+    deployments_count: number
+    author_name: string
+    subscriptions_count: number
   }
   relationships: IRelationships
 }
