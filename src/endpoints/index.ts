@@ -13,6 +13,7 @@ import Vendors from './Vendors'
 import Wishlists from './Wishlists'
 import Donations from './Donations'
 import Deployments from './Deployments'
+import Subscriptions from './Subscriptions'
 import Settings from './Settings'
 
 export {
@@ -31,5 +32,6 @@ export {
   Wishlists,
   Donations,
   Deployments,
+  Subscriptions,
   Settings
 }
