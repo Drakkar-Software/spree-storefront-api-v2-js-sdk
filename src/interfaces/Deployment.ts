@@ -26,11 +26,4 @@ export interface DeploymentsResult extends ResultResponse<Deployments> {}
 
 export type ListOptions = WithCommonOptions<{ suggestToken: true; suggestQuery: true }>
 
-export type CreateOptions = WithCommonOptions<{ suggestToken: true; suggestQuery: true }>
-
-export type UpdateOptions = WithCommonOptions<{ suggestToken: true; suggestQuery: true }>
-
-export type StopOptions = WithCommonOptions<{ suggestToken: true; suggestQuery: true }>
-
 export type ShowOptions = WithCommonOptions<{ suggestToken: true; suggestQuery: true }>
-

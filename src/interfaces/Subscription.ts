@@ -10,10 +10,12 @@ export interface SubscriptionAttr extends  JsonApiDocument {
     cancellation_reasons: string
     next_occurrence_at: number
     cancelled_at: number
+    price: number
     enabled: boolean
     paused: boolean
     frequency: string
-    variant_id: string
+    variants: string[]
+    status: string
   }
 }
 
@@ -31,3 +33,10 @@ export interface SubscriptionsResult extends ResultResponse<Subscriptions> {}
 
 export type ListOptions = WithCommonOptions<{ suggestToken: true; suggestQuery: true }>
 
+export type CreateOptions = WithCommonOptions<{ suggestToken: true; suggestQuery: true }>
+
+export type UpdateOptions = WithCommonOptions<{ suggestToken: true; suggestQuery: true }>
+
+export type StopOptions = WithCommonOptions<{ suggestToken: true; suggestQuery: true }>
+
+export type ShowOptions = WithCommonOptions<{ suggestToken: true; suggestQuery: true }>
